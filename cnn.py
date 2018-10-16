@@ -1,4 +1,5 @@
 import pickle
+import os
 import numpy as np
 try:
     from keras.models import Sequential, Model
@@ -15,10 +16,10 @@ except:
 def cnn():
     #tuning parameters:
     trainable = True
-    filter_sizes = [5,10,15,30]
+    filter_sizes = [5,10,15]
     filters = 200
-    pool_size = 1
-    epochs = 30
+    pool_size = 2
+    epochs = 35
     #
     print("loading data...")
     data = {}
