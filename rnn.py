@@ -1,23 +1,26 @@
 import pickle
+import os
 import numpy as np
 try:
     from keras.preprocessing import sequence
     from keras import regularizers,optimizers
     from keras.models import Sequential, Model
-    from keras.layers import Dense, Embedding,LSTM,Input
+    from keras.layers import Dense, Embedding,LSTM,Input,Bidirectional,Dropout,Flatten
 except:
     print("Require numpy,keras and tensorflow, install it.")
 
 def rnn():
     #tuning parameters:
+    return_sequences = False
     trainable = True
-    epochs = 30
+    epochs = 20
     #
     print("loading data...")
     data = {}
     for name in ["x_train","x_test","y_train","y_test",
                  "wordcount","word_id","id_vec","no_vec_set"]:
-        with open(name+".pkl","rb") as f:
+        path = os.path.join("pkls",name+".pkl")
+        with open(path,"rb") as f:
             try:
                 data[name] = pickle.load(f)
             except:
@@ -36,10 +39,14 @@ def rnn():
 
     model_input = Input(shape=(data["x_train"].shape[1],),dtype='int32')
     embedded_sequences = embedding_layer(model_input)
-    z = LSTM(50,activation="sigmoid", dropout_U = 0.2, dropout_W = 0.2)(embedded_sequences)        
+    z = Bidirectional(LSTM(150,activation="sigmoid", return_sequences=return_sequences, dropout_U = 0.2, dropout_W = 0.2))(embedded_sequences)        
+    if return_sequences:
+        z = Flatten()(z)
+    z = Dropout(0.5)(z)
+    
     model_output = Dense(4, activation="softmax")(z)
     model = Model(model_input, model_output)
-    adam = optimizers.Adam(lr=0.05)
+    adam = optimizers.Adam(lr=0.01)
 
     model.compile(loss="categorical_crossentropy", optimizer=adam, metrics=['binary_accuracy', 'categorical_accuracy'])
     model.summary()
