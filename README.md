@@ -20,12 +20,12 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 　	<td>Test_Acc</td>
 　</tr>
 　<tr>
-　	<td>TFIDF</td>
+　	<td>TFIDF(Baseline)</td>
 　	<td>Regular bag-of-word TFIDF with SVM<br>
 		P.S. SVD DOESNOT help 
 	</td>
-　	<td></td>
-　	<td></td>
+　	<td>0.8625</td>
+　	<td>0.307</td>
 　</tr>
 
 　<tr>
@@ -53,7 +53,7 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 
 　<tr>
 　	<td>RNN(LSTM)</td>
-　	<td>Fucked up now.
+　	<td>Fucked up.
 	</td>
 　	<td></td>
 　	<td></td>
