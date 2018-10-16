@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Music Mood Classification Dataset</title>
+<style type="text/css">
+div#cv { font-family: Arial; font-size: small } 
+</style>
+</head>
+
+<body>
+
+<h1>Music Mood Classification Dataset Version 1.0 (NJU-MusicMood-v1.0)</h1>
+
+<div id="data">
+<p>This page contains the experimental dataset for music mood classification based on the audio and lyric information of music. 
+
+<h3>Dataset:</h3>
+<p>The dataset consists of 777 music clips of 4 mood categories - angry, happy, relaxed and sad, in which 400 clips are used as the training set and the other 377 ones are used for testing. 
+The distribution of clip samples in 4 mood categories are shown in the following table:
+<table border="1">
+<tr>	<th>Mood Category</th>		<th>Training Samples</th>		<th>Testing Samples</th>	</tr>
+<tr>	<td>angry</td>				<td>100</td>					<td>71</td>					</tr>
+<tr>	<td>happy</td>				<td>100</td>   					<td>106</td>				</tr>
+<tr>	<td>relaxed</td>    		<td>100</td>					<td>101</td>				</tr>
+<tr>	<td>sad</td>				<td>100</td>					<td>99</td>					</tr>
+</table>
+Note: Files in each sample set may not be numbered continuously in their file names.
+
+<p>For each music clip in the dataset, a plain text (.txt) file is provided consisting of every sentences of music lyrics, along with the time tags (i.e. the time offset [hour:minute.second] of the sentence relative to the start of the music).
+<p>For copyright reason, the audio data of the music clips cannot be provided here, which, on the other hand, can usually be sought via web search engines and downloaded from the Internet based on the information about the music clip provided in a text file "info.txt" in each training/testing sample set, which comprises 4 information fields separated by colon:
+<ol>
+<li>Music's number in the package (as part of the name of the sample file)
+<li>Music's title
+<li>Performer's name
+<li>Duration of music (in second)
+</ol>
+
+<hr>
+
+<div id="contact">
+
+<h3>Reference:</h3>
+The dataset is created by Hao Xue, Like Xue, Hailiang Xu, and Feng Su, as part of their work on the following paper:<br>
+<u>Multimodal Music Mood Classification by Fusion of Audio and Lyrics. Hao Xue, Like Xue, Feng Su. In Proc. of MMM 2015, LNCS 8936, pp 26-37.</u>
+<br>Please consider to cite the above paper if the dataset is employed.
+
+<h3>Contact:</h3>
+For any questions, please send e-mail to Dr. Feng SU (<a href="mailto:suf@nju.edu.cn">suf@nju.edu.cn</a>).
+
+</div>
+
+</body>
+</html>
