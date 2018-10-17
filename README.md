@@ -52,10 +52,10 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 　</tr>
 
 　<tr>
-　	<td>RNN(LSTM)</td>
-　	<td>Fucked up.
+　	<td>RNN(bidirectional LSTM)</td>
+　	<td>Fucked up. I failed you.
 	</td>
-　	<td></td>
-　	<td></td>
+　	<td>over 0.95</td>
+　	<td>about 0.3</td>
 　</tr>
 </table>
