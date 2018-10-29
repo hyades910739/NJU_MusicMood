@@ -21,11 +21,11 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 　</tr>
 　<tr>
 　	<td>TFIDF(Baseline)</td>
-　	<td>Regular bag-of-word TFIDF with SVM<br>
+　	<td>Regular bag-of-word TFIDF with SVM and Random Forest<br>
 		P.S. SVD DOESNOT help 
 	</td>
-　	<td>0.8625</td>
-　	<td>0.307</td>
+　	<td>SVM:0.8625<br>RF :0.8625</td>
+　	<td>SVM:0.292<br>RF :0.284</td>
 　</tr>
 
 　<tr>
