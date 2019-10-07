@@ -1,5 +1,5 @@
 # 歌詞情緒分析
-last update : Oct.16.2018
+last update : Oct.8.2019
 ### Dataset :
 NJU_MusicMood V1.0, contains 777 songs with lyrics, and each song comes with one label, representing its sentiment : angry, happy, relaxed, or sad. Please check `data/NJU-MusicMood-v1.0.htm` for more information. 
 
@@ -12,6 +12,9 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 
 
 ### Method : 
+
+* new: BERT classifier(see `bert_utli.py ` and `train_bert.py`), now training and tuning...
+
 <table>
 　<tr>
 　	<td>Method</td>
