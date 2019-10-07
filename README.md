@@ -1,5 +1,9 @@
 # 歌詞情緒分析
 last update : Oct.8.2019
+
+### Abstract : 
+This repo implement some lyrics sentiment classification method, including TFIDF-based, CNN, RNN, and BERT classifier.
+
 ### Dataset :
 NJU_MusicMood V1.0, contains 777 songs with lyrics, and each song comes with one label, representing its sentiment : angry, happy, relaxed, or sad. Please check `data/NJU-MusicMood-v1.0.htm` for more information. 
 
@@ -56,7 +60,7 @@ Reference : Multimodal Music Mood Classification by Fusion of Audio and Lyrics.
 
 　<tr>
 　	<td>RNN(bidirectional LSTM)</td>
-　	<td>Fucked up. I failed you.
+　	<td>Fucked up.
 	</td>
 　	<td>over 0.95</td>
 　	<td>about 0.3</td>
